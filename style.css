@@ -1,45 +1,116 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:white;
-    color: black;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4a3ba8 0%, #2f2483 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+    width: 90%;
 }
 
 h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+header .logo {
+    width: 80px;
+    height: auto;
+}
+
+header .header-text h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2f2483;
+}
+
+header .header-text p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #666;
 }
 
 .controls {
     display: flex;
-    flex-direction: row; /* Gumbi jedan ispod drugog */
-    align-items: center;    /* centriramo sve gumbe */
-    margin-bottom: 20px;
-    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .big-button {
     padding: 12px 20px;
     font-size: 16px;
-    margin-bottom: 10px;  /* razmak između gumba */
     cursor: pointer;
-    width: 100px;          /* svi gumbi iste širine */
+    width: 100px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* blagi sjaj */
+    border: none;
+    background: linear-gradient(135deg, #FF6B6B 0%, #C92A2A 100%);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(47, 36, 131, 0.4);
+    transition: all 0.3s;
 }
+
+.big-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(47, 36, 131, 0.5);
+}
+
+.big-button:active {
+    transform: translateY(0);
+}
+
 .allsort-button {
     padding: 12px 20px;
     font-size: 16px;
-    margin-bottom: 10px;  /* razmak između gumba */
     cursor: pointer;
-    width: 300px;          /* svi gumbi iste širine */
+    width: 330px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* blagi sjaj */
+    border: none;
+    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(47, 36, 131, 0.4);
+    transition: all 0.3s;
+}
+
+.allsort-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(47, 36, 131, 0.5);
+}
+
+.allsort-button:active {
+    transform: translateY(0);
 }
 
 .visualizations {
@@ -47,74 +118,97 @@ h1 {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .viz {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* blagi sjaj */
+    border: 3px solid #2f2483;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(47, 36, 131, 0.3);
 }
 
 canvas {
-    
     background-color: white;
+    border-radius: 5px;
     padding: 2px;
 }
 
 .buttons {
     display: flex;
-    gap: 5px;
+    gap: 8px;
     margin-top: 10px;
+    justify-content: center;
 }
 
 button.single, button.generate {
-    padding: 6px 10px;
+    padding: 8px 12px;
     font-size: 14px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(135deg, #FF6B6B 0%, #C92A2A 100%);
+
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+button.single {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+
+}
+
+button.single:hover, button.generate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(47, 36, 131, 0.4);
+}
+
+button.single:active, button.generate:active {
+    transform: translateY(0);
 }
 
 .message {
     margin-top: 8px;
     font-size: 14px;
-    color: #ffd700;
+    color: #2f2483;
+    font-weight: 600;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* razmak između loga i teksta */
-    margin-bottom: 30px;
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .big-button, .allsort-button {
+        width: 100%;
+        
+    }
+
+    .visualizations {
+        gap: 15px;
+    }
 }
 
-header .logo {
-    width: 80px; /* prilagodi veličinu loga */
-    height: auto;
-}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-header .header-text h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-header .header-text p {
-    margin: 2px 0;
-    font-size: 14px;
-    color: #333;
-}
-
-
-.container {
-    border: 2px solid #000000; /* crni okvir */
-    padding: 20px;
-    max-width: 1000px; /* po želji */
-    width: 90%; /* da se smanjuje proporcionalno veličini ekrana */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* centrira sav sadržaj */
+    header .logo {
+        width: 60px;
+    }
 }

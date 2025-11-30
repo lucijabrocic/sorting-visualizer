@@ -88,9 +88,8 @@ function drawArray(ctx, array, highlight=[]) {
     for (let i=0;i<array.length;i++) {
         const x = i*barWidth;
         const y = ctx.canvas.height - array[i];
-        ctx.fillStyle = highlight.includes(i) ? "#ff4c4c" : "#00adef";
+        ctx.fillStyle = highlight.includes(i) ? '#D4AF37': '#2f2483';
         ctx.fillRect(x, y, barWidth-2, array[i]);
-
         ctx.fillStyle = "white";
         ctx.font = "12px Arial";
         ctx.textAlign = "center";
