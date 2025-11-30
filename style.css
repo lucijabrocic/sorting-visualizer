@@ -3,17 +3,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color:white;
     color: black;
     margin: 0;
     padding: 20px;
 }
 
-
 h1 {
     text-align: center;
 }
-
 
 .controls {
     display: flex;
@@ -23,7 +21,6 @@ h1 {
     
 }
 
-
 .big-button {
     padding: 12px 20px;
     font-size: 16px;
@@ -32,16 +29,8 @@ h1 {
     width: 100px;          /* svi gumbi iste širine */
     text-align: center;
     border-radius: 8px;
-    background-color: #2f2483;
-    color: white;
-    border: none;
-    box-shadow: 0 2px 10px rgba(47, 36, 131, 0.5); /* blagi sjaj */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* blagi sjaj */
 }
-
-.big-button:hover {
-    background-color: #4a3ba8;
-}
-
 .allsort-button {
     padding: 12px 20px;
     font-size: 16px;
@@ -50,16 +39,8 @@ h1 {
     width: 300px;          /* svi gumbi iste širine */
     text-align: center;
     border-radius: 8px;
-    background-color: #2f2483;
-    color: white;
-    border: none;
-    box-shadow: 0 2px 10px rgba(47, 36, 131, 0.5); /* blagi sjaj */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* blagi sjaj */
 }
-
-.allsort-button:hover {
-    background-color: #4a3ba8;
-}
-
 
 .visualizations {
     display: flex;
@@ -68,23 +49,21 @@ h1 {
     justify-content: center;
 }
 
-
 .viz {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #2f2483;
+    border: 2px solid black;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(47, 36, 131, 0.5); /* blagi sjaj */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* blagi sjaj */
 }
 
-
 canvas {
+    
     background-color: white;
     padding: 2px;
 }
-
 
 .buttons {
     display: flex;
@@ -92,28 +71,18 @@ canvas {
     margin-top: 10px;
 }
 
-
 button.single, button.generate {
     padding: 6px 10px;
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
-    background-color: #2f2483;
-    color: white;
-    border: none;
 }
-
-button.single:hover, button.generate:hover {
-    background-color: #4a3ba8;
-}
-
 
 .message {
     margin-top: 8px;
     font-size: 14px;
-    color: #2f2483;
+    color: #ffd700;
 }
-
 
 header {
     display: flex;
@@ -122,19 +91,15 @@ header {
     margin-bottom: 30px;
 }
 
-
 header .logo {
     width: 80px; /* prilagodi veličinu loga */
     height: auto;
 }
 
-
 header .header-text h1 {
     margin: 0;
     font-size: 24px;
-    color: #2f2483;
 }
-
 
 header .header-text p {
     margin: 2px 0;
@@ -143,9 +108,8 @@ header .header-text p {
 }
 
 
-
 .container {
-    border: 2px solid #2f2483;
+    border: 2px solid #000000; /* crni okvir */
     padding: 20px;
     max-width: 1000px; /* po želji */
     width: 90%; /* da se smanjuje proporcionalno veličini ekrana */
