@@ -3,8 +3,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1e1e1e;
-    color: white;
+    background-color:white;
+    color: black;
     margin: 0;
     padding: 20px;
 }
@@ -15,9 +15,10 @@ h1 {
 
 .controls {
     display: flex;
-    flex-direction: column; /* Gumbi jedan ispod drugog */
+    flex-direction: row; /* Gumbi jedan ispod drugog */
     align-items: center;    /* centriramo sve gumbe */
     margin-bottom: 20px;
+    
 }
 
 .big-button {
@@ -25,8 +26,20 @@ h1 {
     font-size: 16px;
     margin-bottom: 10px;  /* razmak između gumba */
     cursor: pointer;
-    width: 200px;          /* svi gumbi iste širine */
+    width: 100px;          /* svi gumbi iste širine */
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* blagi sjaj */
+}
+.allsort-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;  /* razmak između gumba */
+    cursor: pointer;
+    width: 300px;          /* svi gumbi iste širine */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* blagi sjaj */
 }
 
 .visualizations {
@@ -40,11 +53,16 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* blagi sjaj */
 }
 
 canvas {
-    border: 1px solid white;
-    background-color: #2e2e2e;
+    
+    background-color: white;
+    padding: 2px;
 }
 
 .buttons {
@@ -57,10 +75,46 @@ button.single, button.generate {
     padding: 6px 10px;
     font-size: 14px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .message {
     margin-top: 8px;
     font-size: 14px;
     color: #ffd700;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* razmak između loga i teksta */
+    margin-bottom: 30px;
+}
+
+header .logo {
+    width: 80px; /* prilagodi veličinu loga */
+    height: auto;
+}
+
+header .header-text h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .header-text p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.container {
+    border: 2px solid #000000; /* crni okvir */
+    padding: 20px;
+    max-width: 1000px; /* po želji */
+    width: 90%; /* da se smanjuje proporcionalno veličini ekrana */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centrira sav sadržaj */
 }

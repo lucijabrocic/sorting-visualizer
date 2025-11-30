@@ -91,7 +91,7 @@ function drawArray(ctx, array, highlight=[]) {
         ctx.fillStyle = highlight.includes(i) ? "#ff4c4c" : "#00adef";
         ctx.fillRect(x, y, barWidth-2, array[i]);
 
-        ctx.fillStyle = "#ffffff";
+        ctx.fillStyle = "white";
         ctx.font = "12px Arial";
         ctx.textAlign = "center";
         ctx.fillText(array[i], x+barWidth/2, ctx.canvas.height-5);
@@ -163,15 +163,19 @@ document.getElementById("startAll").addEventListener("click", async () => {
     const promises = [
         bubbleSort(canvases.bubble.array, h=>drawArray(canvases.bubble.ctx, canvases.bubble.array, h)).then(t=>{
             canvases.bubble.message.textContent = `Sortiranje gotovo u ${t.toFixed(2)} s`;
+            canvases.bubble.message.style.color = "#FF0000";
         }),
         quickSort(canvases.quick.array, h=>drawArray(canvases.quick.ctx, canvases.quick.array, h)).then(t=>{
             canvases.quick.message.textContent = `Sortiranje gotovo u ${t.toFixed(2)} s`;
+            canvases.quick.message.style.color = "#FF0000";
         }),
         selectionSort(canvases.selection.array, h=>drawArray(canvases.selection.ctx, canvases.selection.array, h)).then(t=>{
             canvases.selection.message.textContent = `Sortiranje gotovo u ${t.toFixed(2)} s`;
+            canvases.selection.message.style.color = "#FF0000";
         }),
         insertionSort(canvases.insertion.array, h=>drawArray(canvases.insertion.ctx, canvases.insertion.array, h)).then(t=>{
             canvases.insertion.message.textContent = `Sortiranje gotovo u ${t.toFixed(2)} s`;
+            canvases.insertion.message.style.color = "#FF0000";
         })
     ];
 });

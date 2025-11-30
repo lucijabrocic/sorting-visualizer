@@ -3,53 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sort Visualizer - 4 paralelne vizualizacije</title>
+    <title>Vizualizator algoritama sortiranja</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>Sort Visualizer - 4 algoritma paralelno</h1>
-
-    <div class="controls">
-        <button id="generateRandom" class="big-button">Generiraj slučajan niz</button>
-        <button id="generateSorted" class="big-button">Što ako je niz već sortiran</button>
-        <button id="generateReversed" class="big-button">Što ako je niz obrnuto sortiran</button>
-        <button id="startAll" class="big-button">Pokreni sva sortiranja</button>
-    </div>
-
-
-    <div class="visualizations">
-        <div class="viz">
-            <canvas id="canvasBubble" width="300" height="200"></canvas>
-            <div class="buttons">
-                <button class="single" data-algo="bubble">Bubble Sort</button>
-                <button class="generate" data-algo="bubble">Generiraj niz</button>
-            </div>
-            <div class="message" id="messageBubble"></div>
+    <header>
+        <img src="pmf_logo.png" alt="Logo PMF" class="logo">
+        <div class="header-text">
+            <p>SVEUČILIŠTE U SPLITU</p>
+            <p>Prirodoslovno-matematički fakultet</p>
+            <p>Odjel za informatiku</p>
         </div>
-        <div class="viz">
-            <canvas id="canvasQuick" width="300" height="200"></canvas>
-            <div class="buttons">
-                <button class="single" data-algo="quick">Quick Sort</button>
-                <button class="generate" data-algo="quick">Generiraj niz</button>
-            </div>
-            <div class="message" id="messageQuick"></div>
+    </header>
+
+    <div class="container">
+        <h1>Vizualizator algoritama sortiranja</h1>
+
+        <div class="controls">
+            <button id="generateRandom" class="big-button">Slučajan niz</button>
+            <button id="generateSorted" class="big-button">Sortirani niz</button>
+            <button id="generateReversed" class="big-button">Obrnuti niz</button>
+            
         </div>
-        <div class="viz">
-            <canvas id="canvasSelection" width="300" height="200"></canvas>
-            <div class="buttons">
-                <button class="single" data-algo="selection">Selection Sort</button>
-                <button class="generate" data-algo="selection">Generiraj niz</button>
+        <button id="startAll" class="allsort-button">Pokreni sva sortiranja</button>
+
+
+        <div class="visualizations">
+            <div class="viz">
+                <h3>Bubble Sort</h3>
+                <div class="message" id="messageBubble"></div>
+                <canvas id="canvasBubble" width="300" height="200"></canvas>
+                <div class="buttons">
+                    <button class="single" data-algo="bubble">Sortiraj</button>
+                    <button class="generate" data-algo="bubble">Generiraj niz</button>
+                </div>
+                
             </div>
-            <div class="message" id="messageSelection"></div>
-        </div>
-        <div class="viz">
-            <canvas id="canvasInsertion" width="300" height="200"></canvas>
-            <div class="buttons">
-                <button class="single" data-algo="insertion">Insertion Sort</button>
-                <button class="generate" data-algo="insertion">Generiraj niz</button>
+            <div class="viz">
+                <h3>Quick Sort</h3>
+                <div class="message" id="messageQuick"></div>
+                <canvas id="canvasQuick" width="300" height="200"></canvas>
+                <div class="buttons">
+                    <button class="single" data-algo="quick">Sortiraj</button>
+                    <button class="generate" data-algo="quick">Generiraj niz</button>
+                </div>
+                
             </div>
-            <div class="message" id="messageInsertion"></div>
+            <div class="viz">
+                <h3>Selection Sort</h3>
+                <div class="message" id="messageSelection"></div>
+                <canvas id="canvasSelection" width="300" height="200"></canvas>
+                <div class="buttons">
+                    <button class="single" data-algo="selection">Sortiraj</button>
+                    <button class="generate" data-algo="selection">Generiraj niz</button>
+                </div>
+                
+            </div>
+            <div class="viz">
+                <h3>Insertion Sort</h3>
+                <div class="message" id="messageInsertion"></div>
+                <canvas id="canvasInsertion" width="300" height="200"></canvas>
+                <div class="buttons">
+                    <button class="single" data-algo="insertion">Sortiraj</button>
+                    <button class="generate" data-algo="insertion">Generiraj niz</button>
+                </div>
+                
+            </div>
         </div>
     </div>
 
