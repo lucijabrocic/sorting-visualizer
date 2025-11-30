@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Visualizer - 4 paralelne vizualizacije</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Sort Visualizer - 4 algoritma paralelno</h1>
+
+    <div class="controls">
+        <button id="generateRandom" class="big-button">Generiraj slučajan niz</button>
+        <button id="generateSorted" class="big-button">Što ako je niz već sortiran</button>
+        <button id="generateReversed" class="big-button">Što ako je niz obrnuto sortiran</button>
+        <button id="startAll" class="big-button">Pokreni sva sortiranja</button>
+    </div>
+
+
+    <div class="visualizations">
+        <div class="viz">
+            <canvas id="canvasBubble" width="300" height="200"></canvas>
+            <div class="buttons">
+                <button class="single" data-algo="bubble">Bubble Sort</button>
+                <button class="generate" data-algo="bubble">Generiraj niz</button>
+            </div>
+            <div class="message" id="messageBubble"></div>
+        </div>
+        <div class="viz">
+            <canvas id="canvasQuick" width="300" height="200"></canvas>
+            <div class="buttons">
+                <button class="single" data-algo="quick">Quick Sort</button>
+                <button class="generate" data-algo="quick">Generiraj niz</button>
+            </div>
+            <div class="message" id="messageQuick"></div>
+        </div>
+        <div class="viz">
+            <canvas id="canvasSelection" width="300" height="200"></canvas>
+            <div class="buttons">
+                <button class="single" data-algo="selection">Selection Sort</button>
+                <button class="generate" data-algo="selection">Generiraj niz</button>
+            </div>
+            <div class="message" id="messageSelection"></div>
+        </div>
+        <div class="viz">
+            <canvas id="canvasInsertion" width="300" height="200"></canvas>
+            <div class="buttons">
+                <button class="single" data-algo="insertion">Insertion Sort</button>
+                <button class="generate" data-algo="insertion">Generiraj niz</button>
+            </div>
+            <div class="message" id="messageInsertion"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

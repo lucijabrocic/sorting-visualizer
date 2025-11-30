@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column; /* Gumbi jedan ispod drugog */
+    align-items: center;    /* centriramo sve gumbe */
+    margin-bottom: 20px;
+}
+
+.big-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;  /* razmak između gumba */
+    cursor: pointer;
+    width: 200px;          /* svi gumbi iste širine */
+    text-align: center;
+}
+
+.visualizations {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.viz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    border: 1px solid white;
+    background-color: #2e2e2e;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+button.single, button.generate {
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.message {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ffd700;
+}
